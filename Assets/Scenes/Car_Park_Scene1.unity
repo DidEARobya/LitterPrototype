@@ -41780,11 +41780,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.33333334
   m_MinRegionArea: 2
-<<<<<<< Updated upstream
-  m_NavMeshData: {fileID: 23800000, guid: 07e58165e54c60648bd148850afcafd1, type: 2}
-=======
   m_NavMeshData: {fileID: 0}
->>>>>>> Stashed changes
   m_BuildHeightMesh: 0
 --- !u!1 &1647850159
 GameObject:
@@ -58064,28 +58060,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-<<<<<<< Updated upstream
-  - {fileID: 979816041}
-  - {fileID: 1970206260}
-  - {fileID: 2131092746}
-  - {fileID: 1420550682}
-  - {fileID: 294377880}
-  - {fileID: 1825363384}
-  - {fileID: 356382}
-  - {fileID: 1942406244}
-  - {fileID: 925392216}
-  - {fileID: 891210642}
-  - {fileID: 1365624090}
-  - {fileID: 165626137}
-  - {fileID: 941363166}
-  - {fileID: 231481791}
-  - {fileID: 1945190525}
-  - {fileID: 1790235496}
-  - {fileID: 1614799308}
-  - {fileID: 971043282}
-  - {fileID: 2097239881}
-  - {fileID: 619934313}
-=======
   - {fileID: 1631647319}
   - {fileID: 1343028198}
   - {fileID: 1775995961}
@@ -58446,4 +58420,3 @@ SceneRoots:
   - {fileID: 1048304035}
   - {fileID: 1567799825}
   - {fileID: 63651217}
->>>>>>> Stashed changes
