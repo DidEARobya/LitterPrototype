@@ -115,7 +115,10 @@ public class PlayerController : MonoBehaviour
                 Destroy(hit.gameObject);
                 litterCount++;
 
-                litterCounterText.text = "Litter: " + litterCount;
+                if (litterCounterText != null)
+                {
+                    litterCounterText.text = "Litter: " + litterCount;
+                }
             }
         }
     }
@@ -135,7 +138,10 @@ public class PlayerController : MonoBehaviour
                 hit.GetComponent<Bins>().BinLitter(litterCount);
                 litterCount = 0;
 
-                litterCounterText.text = "Litter: " + litterCount;
+                if (litterCounterText != null)
+                {
+                    litterCounterText.text = "Litter: " + litterCount;
+                }
             }
         }
     }
@@ -148,7 +154,11 @@ public class PlayerController : MonoBehaviour
             if (hit.GetComponentInParent<Customer>() != null)
             {
                 litterCount = 0;
-                litterCounterText.text = "Litter: " + litterCount;
+
+                if (litterCounterText != null)
+                {
+                    litterCounterText.text = "Litter: " + litterCount;
+                }
 
                 spawnCooldown = spawnDelay;
                 transform.position = playerSpawn.position;
