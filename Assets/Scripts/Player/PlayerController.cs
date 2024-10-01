@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour
         obstacleLayer = LayerMask.GetMask("Obstacle");
         litterCount = 0;
 
+        if(maxLitter == 0)
+        {
+            Debug.Log("Max Litter needs a value");
+        }
+
         if(litterCounterText != null)
         {
             litterCounterText.text = "Litter: " + litterCount;
