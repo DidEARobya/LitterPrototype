@@ -38,8 +38,23 @@ public class PlayerController : MonoBehaviour
         obstacleLayer = LayerMask.GetMask("Obstacle");
         litterCount = 0;
 
-        litterCounterText.text = "Litter: " + litterCount;
-        spawnCounterText.gameObject.SetActive(false);
+        if(litterCounterText != null)
+        {
+            litterCounterText.text = "Litter: " + litterCount;
+        }
+        else
+        {
+            Debug.Log("No Litter Text");
+        }
+
+        if(spawnCounterText != null)
+        {
+            spawnCounterText.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("No Spawn Counter Text");
+        }
     }
 
     // Update is called once per frame
@@ -47,13 +62,17 @@ public class PlayerController : MonoBehaviour
     {
         if(spawnCooldown > 0)
         {
-            spawnCounterText.gameObject.SetActive(true);
+            if (spawnCounterText != null)
+            {
+                spawnCounterText.gameObject.SetActive(true);
+                spawnCounterText.text = spawnCooldown.ToString("F2");
+            }
+
             spawnCooldown -= Time.deltaTime;
-            spawnCounterText.text = spawnCooldown.ToString("F2");
             return;
         }
 
-        if(spawnCounterText.IsActive() == true)
+        if(spawnCounterText != null && spawnCounterText.IsActive() == true)
         {
             spawnCounterText.gameObject.SetActive(false);
         }
